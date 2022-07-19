@@ -1,0 +1,42 @@
+
+<div style=" background-color: burlywood; border: 1px solid white;">
+    <h1 class="text-right pt-3 pb-2 pr-1">Admin Panel</h1>
+</div>
+<div class="row">
+<div class="text-center ml-3">
+    <button matbutton class="btn btn-warning" (click)="openDialog()">Add Product</button>
+</div>
+<!-- display all products -->
+<div class="products">
+<!-- <h1>All Products</h1> 
+    <div class="product">
+        <div *ngFor="let dt of result">
+            <div class="col-md-4 col-sm-6">
+                <img src="{{dt.prodImage}}" class="product-img" />
+                <p><strong>Title :</strong> <strong>{{dt.prodName}}</strong></p>
+                <p><strong>Description :</strong> {{dt.prodDescription}}</p>
+                <p><strong>Category :</strong>{{dt.prodCategory}}</p>
+                <p class="money"><strong>Price :</strong> <strong>{{dt.prodPrice}}</strong></p>
+                <p><strong> Quantity : </strong>{{dt.stock}}</p>
+        
+                <button type="button" class="editbtn" routerLink="/admin/{{dt.prodId}}" (click)="editProduct(dt);updateProduct(dt)">Edit</button>
+                <button type="button" class="deletebtn" (click)="deleteProduct(dt.prodId)">Delete</button>
+            </div>
+           </div>
+    </div>-->
+    <div class="row product text-center ">
+        <ng-container *ngFor="let dt of result">                
+            <div class="col-md-3 col-sm-6">
+                <img src="{{dt.prodImage}}" class="product-img" />
+                <p><strong>Title :</strong> <strong>{{dt.prodName}}</strong></p>
+                <p><strong>Description :</strong> {{dt.prodDescription}}</p>
+                <p><strong>Category :</strong>{{dt.prodCategory}}</p>
+                <p class="money"><strong>Price :</strong> <strong>{{dt.prodPrice}}</strong></p>
+                <p><strong> Quantity : </strong>{{dt.stock}}</p>
+        
+                <button type="button" class="editbtn" routerLink="/admin/{{dt.prodId}}" (click)="editProduct(dt);updateProduct(dt)">Edit</button>
+                <button type="button" class="deletebtn" (click)="deleteProduct(dt.prodId)">Delete</button>
+            </div>
+        </ng-container>
+    </div>
+</div>

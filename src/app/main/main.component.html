@@ -1,0 +1,25 @@
+<main>
+    <!-- Populer Product Strat -->
+    <section class="populerproduct bg-white p-0 mt-2 shop-product">
+        <div class="container">
+            <div class="row">
+                <ng-container *ngFor="let dt of result">                
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-item" > 
+                            <div class=" row product-item-image">
+                                <img src="{{dt.prodImage}}" alt="">                                                               
+                            </div>
+                            <div class="product-item-info" >
+                                <a href="product-details.html">{{dt.prodName}}</a>
+                                <span>{{dt.prodPrice}}</span>
+                            </div>
+                            <div class="text-center my-4">
+                                <button class="btn btn-warning" (click)= "addtocart(dt)" > Add to cart </button> </div>
+                        </div>
+                </div>
+            </ng-container>
+            </div>
+        </div>
+    </section>
+    <!-- Populer Product End -->
+</main>

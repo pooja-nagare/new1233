@@ -1,0 +1,62 @@
+<h1>Add Product</h1>
+<div mat-dialog-content>
+  <form [formGroup]="prodForm">
+
+    <div class="row">
+
+    <div class="column"  >
+        <span> Product Name : </span>
+        </div>
+
+        <div class="column" >
+      <input matInput [formControl]="prodName">
+    </div>
+
+      <div class="column">
+        <span> Product Image</span>
+        </div>
+        <div class="column">
+      <input matInput [formControl]="prodImage">
+    </div>
+ 
+      <div class="column">
+        <span>Product Description</span>
+        </div>
+        <div class="column" >
+      <input matInput [formControl]="prodDescription">
+    </div>
+
+    <div class="column">
+        <span>Product Category</span>
+        </div>
+        <div class="column">
+      <input matInput [formControl]="prodCategory">
+    </div>
+
+      <div class="column">
+        <span> Product Price</span>
+        </div>
+        <div class="column">
+      <input matInput [formControl]="prodPrice">
+    </div>
+
+      <div class="column">
+        <span>Product Quantity</span>
+        </div>
+        <div class="column">
+      <input matInput [formControl]="stock">
+    </div>
+    </div>
+
+
+    </form>
+    <br>
+    <br>
+<div mat-dialog-action [align] = "'end'">
+  <button class="btn btn-warning" mat-dialog-close>Close</button>
+
+  <button class="btn btn-primary" (click) = "save()" mat-button routerLink="/admin">{{actionBtn}}</button>
+</div>
+
+</div>
+

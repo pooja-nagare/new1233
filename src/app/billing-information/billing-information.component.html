@@ -1,0 +1,52 @@
+<div class="white-space"></div>
+<div class="wrapper">
+
+    <div class="row">
+        <form >
+            <div class="col-7 col">
+                <h3 class="topborder"><span>Billing Details</span></h3>
+            
+                <div class="width50 padright">
+                    <label for="fname">First Name</label>
+                    <input type="text" name="fname" id="fname" [formControl]="Fname" placeholder="Enter your first name"
+                        required>
+
+
+                </div>
+                <div class="width50">
+                    <label for="lname">Last Name</label>
+                    <input type="text" name="lname" id="lname" [formControl]="Lname" placeholder="Enter your last name"
+                        required>
+
+                </div>
+                <label for="address">Address</label>
+                <input type="text" name="address" id="address" [formControl]="Address" placeholder="Enter your address"
+                    required>
+
+                <label for="address">LandMark</label>
+                <input type="text" name="landmark" id="landmark" [formControl]="Landmark"
+                    placeholder="Enter your LandMark">
+                <label for="city">Town / City</label>
+                <input type="text" name="city" id="city" [formControl]="City" placeholder="Enter your city " required>
+                <div class="row">
+                    <div class="col-4" style="width:48%;">
+                        <label for="pincode">Pincode</label>
+                        <input type="text" name="pincode" id="pincode" [formControl]="Pincode" placeholder="Pincode / Zip" >
+                    </div>
+                    <div class="col-4"></div>
+                    <div class="col-4" style="width:48%;">
+                        <label for="Mobile">Mobile no</label>
+                        <input type="text" name="Mobile" id="Mobile" [formControl]="MobileNo" placeholder="Enter mobile no.">
+                    </div>
+                </div>
+               
+                <div class="width:17px">
+                    <label for="email">Email Address</label>
+                    <input type="text" name="email" id="email"  [formControl]="Email" placeholder="Enter email-id">
+                </div>
+                <button class="btn btn-primary" routerLink="/order" id="SaveAddress" mat-button routerLink="" (click)="saveorder()">Save Address</button>
+
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+
+/* to disply products on admin panel */
+
+h1{
+  font-size:2em;
+}
+.editbtn
+{
+  height:2.5em;
+  width:5em;
+  background-color: rgb(96, 197, 99);
+  border:none;
+  color:white;
+  border-radius: 1em;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+
+}
+
+.editbtn:hover{
+  background-color: rgb(6, 142, 10);
+  height: 2.6em;
+  width: 5.2em;
+}
+
+.deletebtn
+{
+  height:2.5em;
+  width:5em;
+  background-color: rgba(245, 79, 28, 0.865);
+  border:none;
+  color:white;
+  border-radius: 1em;
+  font-weight: 600;
+  font-size: 1em;
+  margin-left:1em;
+  cursor: pointer;
+}
+.deletebtn:hover{
+  background-color: rgb(250, 2, 2);
+  height: 2.6em;
+  width: 5.2em;
+}
+ 
+.product>mat-card:hover{
+    background-color: rgba(188, 185, 182, 0.886);
+}
+  

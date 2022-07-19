@@ -1,0 +1,86 @@
+<div *ngIf="product.length !=0">
+    
+          <!-- Cart Area Start -->
+   <section class="cart-area">
+    <div class="container">
+        <div>
+            <div class="row">
+                <div class="cart-items">
+                    <div class="header">
+                        <div class="image">
+                            Product
+                        </div>
+                        <div class="name">
+                            Product Name
+                        </div>
+                        <div class="price">
+                            Quantity
+                        </div>
+                        <div class="quantity">
+                            Prices
+                        </div>
+                        
+                    </div>
+                    <div class="body" *ngFor="let p of product, let i= index">
+                        <div class="item mr-4" >
+                            <div class="image">
+                                <img src="{{p.prodImage}}">
+                            </div>
+                            <div class="name mr-5">
+                                <div class="name-text">
+                                    <p>{{p.prodName}}</p>
+                                </div>
+                                <div class="button">
+                                    <a class="del" (click)="removeItem(p)" routerLink="cart">Delete</a>
+                                </div>
+                            </div>
+                            <div class="price mr-5">
+                                <div class="bg-light">
+                                    <div class="product-pricelist-selector-quantity ml-5">          
+                                        <button class="fa-solid fa-minus mr-1 " id="minus" type="button" (click)="dec(p.productId,p.quantity)"></button>
+                                        <span>{{p.quantity}}</span>  
+                                        <button class="fa fa-plus ml-1" id="plus" type="button" (click)="inc(p.productId,p.quantity)"></button>    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quantity">
+                                <span>{{p.quantity * p.prodPrice}}</span>
+                            </div>   
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="body">
+                        <div class="row">
+                            <div class="price" *ngIf="product.length > 0">
+                                <p style="margin-left:620px; margin-bottom:20px;">Total: ({{totalItem}} items) &nbsp; &nbsp;<strong class="float-right">{{grandTotal}}</strong></p> 
+                            </div> 
+                        </div>
+                        <button class="btn bg-primary"style="margin-left:500px;" routerLink="/billing-information">Proceed to chckout</button> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    
+</section>
+<!-- Cart Area End -->
+</div>
+
+<div class="" *ngIf="product.length == 0">
+    <div class="row align-items-center">
+        <div class="col-lg-6 order-2 order-lg-1">
+            <div class="banner-area__content">
+                <h2>Premium care for
+                    premium people.</h2>
+                <p> Shop all a electronic products here.</p>
+                <a class="btn bg-primary" routerLink="/main">Shop Now</a>
+            </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2">
+            <div class="banner-area__img">
+                <img src="../../assets/pics/banner.jpg" class="img-fluid" style="height:400px; width: 400px;">
+            </div>
+        </div>
+    </div>
+</div>

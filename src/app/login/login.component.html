@@ -1,0 +1,43 @@
+
+
+    <!-- Account-Login -->
+    <section class="account-sign">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="">
+                        <h5 class="text-center mt-3 mb-0" style="font-size:30px;"><b>LOG IN</b></h5>
+                        <form id="Login" [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate >
+                        <div class="mb-3 mt-3">
+                            <mat-form-field class="w-75 ml-5">
+                              <input matInput type="email" formControlName="Username"  class="form-control"  placeholder="Email Address">
+                              <mat-error *ngIf="!loginForm.get('Username')?.errors?.required && (loginForm.get('Username')?.errors?.pattern)">
+                                Please enter a valid Username
+                              </mat-error>
+                              <mat-error *ngIf="loginForm.get('Username')?.invalid && (loginForm.get('Username')?.dirty || loginForm.get('Username')?.touched) && loginForm.get('Username')?.errors?.required">
+                                Username is required
+                               </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="mb-3">
+                            <mat-form-field class="w-75 ml-5">
+                                <input matInput type="Password"  class="form-control" placeholder="Password" formControlName="Password">
+                                <mat-error *ngIf="!loginForm.get('Password')?.errors?.required">
+                                    Password length must be greater than or equal to 8 and password must contain one or more uppercase , lowercase , numeric and special characters
+                                </mat-error>
+                                <mat-error *ngIf="loginForm.get('Password')?.invalid && (loginForm.get('Password')?.dirty || loginForm.get('Password')?.touched) && loginForm.get('Password')?.errors?.required">
+                                    Password is required
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <button [disabled]="!loginForm.valid" mat-raised-button color="success" mat-button routerLink="/admin"   class="btn btn-primary mb-5 ml-5">Login</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
